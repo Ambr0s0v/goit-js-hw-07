@@ -18,7 +18,7 @@ function makeGallery(selector){
                             .map(makeItemMarkup)
                             .join("");
     selector.insertAdjacentHTML("beforeend",markup);
-
+  
 }
 
 makeGallery(gallery);
@@ -26,9 +26,9 @@ makeGallery(gallery);
 
 const picHandler = (event) => {
     event.preventDefault();
-    console.log(event.target.alt);// target where click was detected
-    console.log(event.currentTarget); // target where listener is added
-    console.log(event.target.dataset.source)// data-source attr
+    console.dir(event.currentTarget);// target where click was detected
+    // console.log(event.currentTarget); // target where listener is added
+    // console.log(event.target.dataset.source)// data-source attr
 
     if(event.target.nodeName !== "IMG") return;
 
